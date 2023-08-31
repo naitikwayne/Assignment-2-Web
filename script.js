@@ -47,7 +47,6 @@ function createBoard() {
 
 // Function to handle tile click
 function handleTileClick(row, col) {
-    console.log("Came into tile click")
     const tileNumber = tiles[row * BOARD_SIZE + col];
     if (isAdjacent(row, col)) {
         moveTile(row, col);
@@ -74,7 +73,6 @@ function isAdjacent(row, col) {
 
 // Function to move a tile to the empty slot
 function moveTile(row, col) {
-    console.log("Came into move tile")
     const tileNumber = tiles[row * BOARD_SIZE + col];
     tiles[row * BOARD_SIZE + col] = emptyTile;
     emptyTile = tileNumber;
